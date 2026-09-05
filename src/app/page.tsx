@@ -1,5 +1,5 @@
 import Profile from "@/components/Profile";
-import LinkCard from "@/components/LinkCard";
+import LinkList from "@/components/LinkList";
 
 export default function Home() {
   return (
@@ -10,10 +10,7 @@ export default function Home() {
           bio="풀스택 개발자 | 요즘에는 AI개발에 관심이 많아요"
           imageUrl="https://placehold.co/150x150/orange/white"
         />
-        <div className="flex w-full flex-col gap-4">
-          <LinkCard title="GitHub" url="https://github.com" />
-          <LinkCard title="LinkedIn" url="https://linkedin.com" />
-        </div>
+        <LinkList />
       </main>
     </div>
   );
