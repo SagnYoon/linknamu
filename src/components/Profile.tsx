@@ -1,17 +1,24 @@
+import Image from "next/image";
+
 type ProfileProps = {
   name: string;
   bio: string;
-  initial: string;
+  imageUrl: string;
 };
 
-export default function Profile({ name, bio, initial }: ProfileProps) {
+export default function Profile({ name, bio, imageUrl }: ProfileProps) {
   return (
     <div className="flex flex-col items-center gap-3 text-center">
-      <div className="flex h-24 w-24 items-center justify-center rounded-full bg-zinc-800 text-3xl font-semibold text-white dark:bg-zinc-200 dark:text-zinc-900">
-        {initial}
-      </div>
+      <Image
+        src={imageUrl}
+        alt={name}
+        width={150}
+        height={150}
+        unoptimized
+        className="h-24 w-24 rounded-full object-cover"
+      />
       <div>
-        <p className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+        <p className="text-lg font-bold text-zinc-900 dark:text-zinc-50">
           {name}
         </p>
         <p className="text-sm text-zinc-500 dark:text-zinc-400">{bio}</p>

@@ -7,8 +7,8 @@ export default function Home() {
       <main className="flex w-full max-w-sm flex-col items-center gap-8">
         <Profile
           name="이상윤"
-          bio="세계 최강 바이브 코더"
-          initial="이"
+          bio="풀스택 개발자 | 요즘에는 AI개발에 관심이 많아요"
+          imageUrl="https://placehold.co/150x150/orange/white"
         />
         <div className="flex w-full flex-col gap-4">
           <LinkCard title="GitHub" url="https://github.com" />
